@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reservation | Omakase UwU</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="brand">
+
+        <div class="logo">
+            OMAKASE <span>UwU</span>
+        </div>
+
+        <div class="japanese">
+            おまかせ
+        </div>
+
+        <p>
+            RESERVATION
+        </p>
+
+    </div>
+
+
+    <div class="booking-card">
+
+        <h1>
+            จองโต๊ะ
+        </h1>
+
+        <p class="description">
+            กรุณากรอกข้อมูลการจอง
+        </p>
+
+
+        {% if error %}
+
+        <div class="error">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+
+        <form
+            action="/confirm-booking"
+            method="POST">
+
+
+            <label>
+                ชื่อผู้จอง
+            </label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="ชื่อเล่น"
+                required
+            >
+
+
+            <label>
+                วันที่ต้องการจอง
+            </label>
+
+            <input
+                type="text"
+                name="date"
+                placeholder="xx/xx/xxxx"
+                maxlength="10"
+                pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+                required
+            >
+
+
+            <label>
+                เวลาที่จะมารับประทาน
+            </label>
+
+            <input
+                type="text"
+                name="time"
+                placeholder="xx:xx"
+                maxlength="5"
+                pattern="[0-9]{2}:[0-9]{2}"
+                required
+            >
+
+
+            <label>
+                จำนวนคน
+            </label>
+
+            <input
+                type="number"
+                name="people"
+                min="1"
+                max="20"
+                placeholder="จำนวนคน"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="main-button">
+
+                ยืนยันการจอง
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

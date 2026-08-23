@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Omakase UwU</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="brand">
+
+        <div class="logo">
+            OMAKASE <span>UwU</span>
+        </div>
+
+        <div class="japanese">
+            おまかせ
+        </div>
+
+        <p>
+            OMAKASE RESTAURANT
+        </p>
+
+    </div>
+
+
+    <div class="login-card">
+
+        <h1>
+            ยินดีต้อนรับ
+        </h1>
+
+        <p class="description">
+            กรุณาเลือกวิธีเข้าสู่ระบบ
+        </p>
+
+
+        <form
+            action="/login-method"
+            method="POST">
+
+            <div class="login-buttons">
+
+                <button
+                    type="submit"
+                    name="method"
+                    value="email"
+                    class="login-button">
+
+                    <span class="icon">
+                        ✉
+                    </span>
+
+                    Email
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    name="method"
+                    value="google"
+                    class="login-button">
+
+                    <span class="google-icon">
+                        G
+                    </span>
+
+                    Google
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <div class="line"></div>
+
+        <p class="small-text">
+            เข้าสู่ระบบเพื่อทำการจองโต๊ะ
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

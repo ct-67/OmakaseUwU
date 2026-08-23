@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>จองสำเร็จ | Omakase UwU</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <div class="logo small-logo">
+            OMAKASE <span>UwU</span>
+        </div>
+
+
+        <h1>
+            จองสำเร็จแล้ว
+        </h1>
+
+
+        <p class="description">
+            ขอบคุณที่เลือกใช้บริการของเรา
+        </p>
+
+
+        <div class="details">
+
+            <div class="detail-row">
+
+                <span>
+                    ชื่อผู้จอง
+                </span>
+
+                <strong>
+                    {{ booking.name }}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    วันที่
+                </span>
+
+                <strong>
+                    {{ booking.date }}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    เวลา
+                </span>
+
+                <strong>
+                    {{ booking.time }}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    จำนวน
+                </span>
+
+                <strong>
+                    {{ booking.people }} คน
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="notice">
+
+            📱 กรุณาแคปหน้าจอนี้
+
+            <br>
+
+            เพื่อเป็นหลักฐานการจอง
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

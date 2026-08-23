@@ -1,0 +1,554 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        "Noto Sans Thai",
+        sans-serif;
+
+    color: #3d3435;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffeef2,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #f9e0e5,
+            transparent 40%
+        ),
+        #fffaf7;
+}
+
+
+.page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 20px;
+
+}
+
+
+/* LOGO */
+
+.brand {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.logo {
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #302729;
+
+}
+
+
+.logo span {
+
+    color: #c8798c;
+
+}
+
+
+.japanese {
+
+    font-size: 18px;
+
+    color: #c8798c;
+
+    margin-top: 5px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.brand p {
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #a89b9d;
+
+    margin-top: 8px;
+
+}
+
+
+/* CARD */
+
+.login-card,
+.form-card,
+.booking-card,
+.success-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border-radius: 26px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(121,74,82,0.12);
+
+}
+
+
+/* TEXT */
+
+h1 {
+
+    text-align: center;
+
+    margin: 0 0 8px;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+}
+
+
+.description {
+
+    text-align: center;
+
+    color: #a29899;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* LOGIN BUTTON */
+
+.login-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.login-button {
+
+    flex: 1;
+
+    height: 58px;
+
+    border-radius: 14px;
+
+    border: 1px solid #eee3e5;
+
+    background: white;
+
+    color: #3d3435;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    transition: 0.2s;
+
+}
+
+
+.login-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(100,60,70,0.1);
+
+}
+
+
+.icon {
+
+    color: #c8798c;
+
+    font-size: 20px;
+
+}
+
+
+.google-icon {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: #4285f4;
+
+}
+
+
+.line {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #eee5e6;
+
+    margin: 25px 0 18px;
+
+}
+
+
+.small-text {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+}
+
+
+/* FORM */
+
+.top-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #fbe7eb;
+
+    color: #c8798c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-top: 17px;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e6dcde;
+
+    background: #fffdfd;
+
+    color: #443a3c;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+input::placeholder {
+
+    color: #bdb3b5;
+
+}
+
+
+input:focus {
+
+    border-color: #c8798c;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,121,140,0.1);
+
+}
+
+
+/* MAIN BUTTON */
+
+.main-button {
+
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #c8798c;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.main-button:hover {
+
+    background: #b9697d;
+
+}
+
+
+/* ERROR */
+
+.error {
+
+    background: #fff0f1;
+
+    color: #bd5967;
+
+    padding: 12px;
+
+    border-radius: 11px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* BACK */
+
+.back {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #a49497;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+}
+
+
+/* BOOKING */
+
+.booking-card {
+
+    max-width: 500px;
+
+}
+
+
+/* SUCCESS */
+
+.success-card {
+
+    text-align: center;
+
+}
+
+
+.success-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    background: #c8798c;
+
+    color: white;
+
+    font-size: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.small-logo {
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.details {
+
+    background: #fff6f7;
+
+    border-radius: 16px;
+
+    padding: 12px 18px;
+
+    margin-top: 25px;
+
+    text-align: left;
+
+}
+
+
+.detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #f0e1e3;
+
+    font-size: 14px;
+
+}
+
+
+.detail-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.detail-row span {
+
+    color: #9f9295;
+
+}
+
+
+.notice {
+
+    margin-top: 22px;
+
+    padding: 15px;
+
+    background: #fff1f3;
+
+    border-radius: 13px;
+
+    color: #b56879;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .page {
+
+        padding: 25px 15px;
+
+    }
+
+    .login-card,
+    .form-card,
+    .booking-card,
+    .success-card {
+
+        padding: 25px 20px;
+
+    }
+
+    .logo {
+
+        font-size: 28px;
+
+    }
+
+}

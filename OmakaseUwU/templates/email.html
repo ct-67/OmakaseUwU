@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Email | Omakase UwU</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="brand">
+
+        <div class="logo">
+            OMAKASE <span>UwU</span>
+        </div>
+
+        <div class="japanese">
+            おまかせ
+        </div>
+
+    </div>
+
+
+    <div class="form-card">
+
+        <div class="top-icon">
+            ✉
+        </div>
+
+        <h1>
+            เข้าสู่ระบบ
+        </h1>
+
+        <p class="description">
+            เข้าสู่ระบบด้วย Email
+        </p>
+
+
+        {% if error %}
+
+        <div class="error">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+
+        <form
+            action="/email-login"
+            method="POST">
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+            >
+
+
+            <label>
+                รหัสผ่าน
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="รหัสผ่าน"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="main-button">
+
+                ยืนยัน
+
+            </button>
+
+        </form>
+
+
+        <a href="/" class="back">
+            ← กลับ
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
